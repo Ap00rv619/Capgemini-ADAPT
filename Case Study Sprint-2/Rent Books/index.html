@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rent Books</title>
+        <script>
+function ShowTotalCost()
+{
+var name= document.getElementById("name").value;
+var day=parseInt(document.getElementById("tenure").value);
+var qty= parseInt(document.getElementById("total").value);
+rentperdays =  100 * day * qty;
+val=confirm("Rent for Books Selected:" + rentperdays);
+if (val==true)
+alert("Thank You for Order" + name);
+}
+else{
+    continue;
+}
+function UserName()
+{
+var name= document.getElementById("name").value;
+if(/[a-zA-Z]{5,}/.test(name))
+alert("Name ok");
+else
+alert("Minimum 5 Characters and only one special character allowed");
+}
+
+function RentChecker()
+{
+var rentcheck=document.getElementById("tenure").value;
+if(rentcheck>30)
+alert("We cannot rent over than 30 days SORRY!!!");
+else
+alert("You can rent the book");
+}
+</script>
+    </head>
+    <body>
+        <h2><span style="background color:#000080; color:#ff6600;">Rent Books</span></h2>
+        <table>
+            <tr>
+                <td>Book Name</td>
+                <td><select><option>HTML</option><option>DBMS</option><option>SE</option><option>JAVA</option><option>PYTHON</option><option>ML</option></select></td>
+            </tr>
+            <tr>
+                <td>User Name</td>
+                <td><input type="text" id="name" onblur="UserName()"></td>
+            </tr>
+            <tr>
+                <td>Rent Start Date</td>
+                <td><input type="text" id="startdate" placeholder="mm/dd/yyyy"></td>
+            </tr>
+            <tr>
+                <td>Rent Tenure</td>
+                <td><input type="text" id="tenure" onblur="RentChecker()"></td>
+            </tr>
+            <tr>
+                <td>Number of Books Available</td>
+                <td><input type="text" id="booksavailable"></td>
+            </tr>
+            <tr>
+                <td>Enter number of Books</td>
+                <td><input type="text" id="numofbooks"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" onclick="ShowTotalCost()" value="Submit Query" ></td>
+            </tr>
+        </table>
+    </body>
+</html>
