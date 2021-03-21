@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Books</title>
+    </head>
+    <body>
+           
+        <h2><span style="background-color: #000080; color: #ff6600;">Add Books</span></h2>
+        <table>
+            <tr>
+                <td>Book Name</td>
+                <td><input type="text" name="BookName" minlength="3"></td>
+            </tr>
+            <tr>
+                <td>Book Type</td>
+                <td><input type="text" name="BookType" minlength="5"></td>
+            </tr>
+            <tr>
+                <td>Min-Age</td>
+                <td><select><option value="0"></option><option value="1"></option><option value="2"></option><option value="3"></option><option value="4"></option><option value="5"></option><option value="6"></option><option value="7"></option><option value="8"></option><option value="9"></option><option value="10"></option><option value="11"></option><option value="12"></option></select></td>
+            </tr>
+            <tr>
+                <td>Max-Age</td>
+                <td><select><option value="0"></option><option value="1"></option><option value="2"></option><option value="3"></option><option value="4"></option><option value="5"></option><option value="6"></option><option value="7"></option><option value="8"></option><option value="9"></option><option value="10"></option><option value="11"></option><option value="12"></option></select></td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td><input type="text" id="price"/></td>
+            </tr>
+            <tr>
+                <td>Quantity Available in Stock</td>
+                <td><input type="text" id="quantity"/></td>
+            </tr>
+            <tr>
+                <td>Rental amount per day</td>
+                <td><input type="text" id="rental amount per day"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Submit" onclick="validate()"></td>
+            </tr>
+        </table>
+    </body>
+</html>
